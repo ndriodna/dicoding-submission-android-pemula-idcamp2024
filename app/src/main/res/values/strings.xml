@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">submission-android-pemula</string>
+    <string name="app_name">Wuthering Waves Waifu</string>
     <string name="about">about</string>
+    <string name="character_name">character name</string>
+    <string name="attribute">attribute</string>
+    <string name="_5">5</string>
 </resources>

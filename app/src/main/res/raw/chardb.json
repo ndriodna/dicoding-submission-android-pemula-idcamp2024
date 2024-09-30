@@ -1,0 +1,102 @@
+{
+  "attribute": {
+    "Fusion": "https://wuthering.gg/_ipx/q_70&s_48x48/images/IconElement/T_IconElementFire3.png",
+    "Spectro": "https://wuthering.gg/_ipx/q_70&s_48x48/images/IconElement/T_IconElementLight3.png",
+    "Glacio": "https://wuthering.gg/_ipx/q_70&s_48x48/images/IconElement/T_IconElementIce3.png",
+    "Electro": "https://wuthering.gg/_ipx/q_70&s_48x48/images/IconElement/T_IconElementThunder3.png",
+    "Aero": "https://wuthering.gg/_ipx/q_70&s_48x48/images/IconElement/T_IconElementWind3.png",
+    "Havoc": "https://wuthering.gg/_ipx/q_70&s_48x48/images/IconElement/T_IconElementDark3.png"
+  },
+  "data": [
+    {
+      "name": "Changli",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/d/d2/Changli_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/e/e9/Changli_Card.png",
+      "desc": "Counselor to the Jinzhou Magistrate, Changli excels at leveraging human nature to corner her enemies into traps. Being the mentor to Jinhsi, she is persuasive and patient. She entertains an unwavering aspiration, holding her ground in the endless game against time and chaos.",
+      "rarity": "5",
+      "attribute": "Fusion",
+      "birth": "June 6th"
+    },
+    {
+      "name": "Jinhsi",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/b/b2/Jinhsi_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/a/a9/Jinhsi_Card.png",
+      "desc": "Being the Magistrate of Jinzhou, Jinhsi bears her noble and weighty share of duties.Through repeated ages, the Lament has preyed upon mankind's vulnerable hope. Yet, grasping the nettle, she strives with all her might to forge a path toward tomorrow.",
+      "rarity": "5",
+      "attribute": "Spectro",
+      "birth": "March 6th"
+    },
+    {
+      "name": "The Shorekeeper",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/3/3a/The_Shorekeeper_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/2/2f/The_Shorekeeper_Card.png",
+      "desc": "The Shorekeeper of the Black Shores, a mysterious divine being governing the essence of aloofness, emerges in response to your summon. Having spent eons in guardianship, the first stirrings of emotion and desire awaken within her heart, fostering a firm determination to connect with the world — and with you.",
+      "rarity": "5",
+      "attribute": "Spectro",
+      "birth": "February 27th"
+    },
+    {
+      "name": "Zhezhi",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/8/81/Zhezhi_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/f/f0/Zhezhi_Card.png",
+      "desc": "She is a commissioned painter, quiet and shy with a dedication to her craft. She's not very eloquent, but her persistence and love for painting speak volumes.",
+      "rarity": "5",
+      "attribute": "Glacio",
+      "birth": "December 31st"
+    },
+    {
+      "name": "Yinlin",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/4/45/Yinlin_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/b/b4/Yinlin%27s_Card.jpg",
+      "desc": "Previously known as an outstanding Jinzhou Patroller, Yinlin is steady and reliable, yet harbors hidden depths of secrets. She excels at exploiting resources at her disposal to uncover lurking crimes.Beneath her aloof and flamboyant exterior, Yinlin possesses a heart of gold, reserved only for those she deems trustworthy.",
+      "rarity": "5",
+      "attribute": "Electro",
+      "birth": "September 17th"
+    },
+    {
+      "name": "Jianxin",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/d/d4/Jianxin_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/8/8a/Jianxin_Card.jpg",
+      "desc": "Born in the wilderness and raised in a Taoist sect, Jianxin has been imparted the martial arts of Fengyiquan. Her upbringing instilled in her a pure and persistent dedication to perfecting her martial arts skills. Now, she journeys into the secular world, eager to experience the bittersweetness of everyday life and gain a deeper understanding of the world around her.",
+      "rarity": "5",
+      "attribute": "Aero",
+      "birth": "April 6th"
+    },
+    {
+      "name": "Baizhi",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/c/cc/Baizhi_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/e/ed/Baizhi_Card.png",
+      "desc": "Baizhi, a researcher at Huaxu Academy, is known for her sharp intellect and precise methods. \nDespite appearing aloof, she is approachable to those who seek knowledge. \nHer insatiable thirst for understanding drives her to tirelessly study Remnant Energy. \nShe will stop at nothing until its mysteries are unraveled, even if it means dedicating her entire life to the pursuit.",
+      "rarity": "4",
+      "attribute": "Glacio",
+      "birth": "September 10th"
+    },
+    {
+      "name": "Chixia",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/8/87/Chixia_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/d/da/Chixia_Card.png",
+      "desc": "Chixia is a junior Jinzhou Patroller. \nShe roams Jinzhou City, leaving her fiery mark on every alley she stamps through. \nAs the starring hero among her community, Chixia is always ready for anyone in need.",
+      "rarity": "4",
+      "attribute": "Fusion",
+      "birth": "April 18th"
+    },
+    {
+      "name": "Sanhua",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/9/94/Sanhua_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/5/5d/Sanhua_Card.png",
+      "desc": "A loyal and reliable guard for Jinhsi, Sanhua is composed and reserved. \nSanhua perceives a world distinctly different from that in the eyes of others, and her body temperature is below normal. \nHer Forte allows her to cool the surrounding air and conjure snow. \nTo maintain emotional stability and prevent Overclocking, Sanhua finds solace in the art of swordplay. \nThis allows her to master her Forte with graceful ease and alleviates the burden on her body.",
+      "rarity": "4",
+      "attribute": "Glacio",
+      "birth": "January 20th"
+    },
+    {
+      "name": "Yangyang",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/d/d0/Yangyang_Full_Sprite.png",
+      "thumbnail": "https://static.wikia.nocookie.net/wutheringwaves/images/a/a7/Yangyang_Card.png",
+      "desc": "Yangyang journeyed far away from home to become an Outrider in Jinzhou. \nInstead of seeking the spotlight, Yangyang chooses to provide comfort through quiet companionship for others. \nAfter enduring hardships and anguish, she has found a clear purpose: to be a beacon of guidance and an aiding presence in a world still in need of healing.",
+      "rarity": "4",
+      "attribute": "Aero",
+      "birth": "October 11th"
+    }
+  ]
+}
