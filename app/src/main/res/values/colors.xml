@@ -3,4 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gold">#fcdd51</color>
+    <color name="fusion">#f2727a</color>
+    <color name="glacio">#6ea5ff</color>
+    <color name="electro">#9b59f7</color>
+    <color name="spectro">#faf569</color>
+    <color name="aero">#69fad1</color>
+    <color name="havoc">#8a2b5c</color>
 </resources>
