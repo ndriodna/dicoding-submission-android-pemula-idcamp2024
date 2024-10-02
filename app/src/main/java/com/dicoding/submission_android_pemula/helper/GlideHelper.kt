@@ -15,7 +15,7 @@ object GlideHelper {
             }
 
             override fun onLoadCleared(placeholder: Drawable?) {
-                TODO("Not yet implemented")
+                materialBtn.icon = placeholder
             }
         })
     }

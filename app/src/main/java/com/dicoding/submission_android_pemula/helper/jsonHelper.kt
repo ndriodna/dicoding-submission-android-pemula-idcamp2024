@@ -30,9 +30,7 @@ object jsonHelper {
             waifuList.add(Waifu(name, img, thumbnail,desc, rarity, attribute, birth))
 
         }
-
         return waifuList
-
     }
     fun getAttribute(context: Context,resourceId: Int): JSONObject{
         val json = readJson(context, resourceId)

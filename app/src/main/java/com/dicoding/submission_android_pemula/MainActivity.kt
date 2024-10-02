@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,11 +15,17 @@ import com.dicoding.submission_android_pemula.Activity.DetailActivity
 import com.dicoding.submission_android_pemula.Adapter.ListWaiufAdapter
 import com.dicoding.submission_android_pemula.Model.Waifu
 import com.dicoding.submission_android_pemula.databinding.ActivityMainBinding
+import com.dicoding.submission_android_pemula.databinding.ItemRowWaifuBinding
+import com.dicoding.submission_android_pemula.helper.GlideHelper
 import com.dicoding.submission_android_pemula.helper.jsonHelper
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val list = ArrayList<Waifu>()
+    private val dataFromJson = jsonHelper
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvMain.setHasFixedSize(false)
 
-        list.addAll(jsonHelper.getWaifuList(this, R.raw.chardb))
+        list.addAll(dataFromJson.getWaifuList(this, R.raw.chardb))
         setRvList()
 
     }
@@ -52,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvMain.layoutManager = LinearLayoutManager(this)
         val listWaiufAdapter = ListWaiufAdapter(list)
         binding.rvMain.adapter = listWaiufAdapter
+
         listWaiufAdapter.onClickItem = { waifu: Waifu ->
             val moveIntent = Intent(this, DetailActivity::class.java)
             moveIntent.putExtra("waifu", waifu)

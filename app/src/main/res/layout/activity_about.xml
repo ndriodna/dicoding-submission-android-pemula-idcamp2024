@@ -7,4 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".Activity.AboutActivity">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/about_profile"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/profile_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/about_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rizal_putra_aditya"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_name"
+        android:textSize="18sp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

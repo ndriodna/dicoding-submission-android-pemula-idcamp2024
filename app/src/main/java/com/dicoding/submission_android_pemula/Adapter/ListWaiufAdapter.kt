@@ -33,7 +33,6 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
 
     override fun onBindViewHolder(holder: ListviewHolder, position: Int) {
         val waifu = listWaifu[position]
-        val attributeUrl = jsonHelper.getAttribute(holder.binding.root.context, R.raw.chardb)
         Glide.with(holder.binding.root).load(waifu.thumbnail).timeout(60000).diskCacheStrategy(
             DiskCacheStrategy.AUTOMATIC
         ).override(Target.SIZE_ORIGINAL).fitCenter().placeholder(R.drawable.place_holder)
@@ -41,9 +40,13 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
         holder.binding.cardTitle.text = waifu.name
         holder.binding.cardRarity.text = waifu.rarity
         holder.binding.cardAttribute.text = waifu.attribute
-        when (waifu?.attribute) {
+        holder.binding.root.setOnClickListener {
+            onClickItem?.invoke(waifu)
+        }
+        val getAttr = jsonHelper.getAttribute(holder.itemView.context, R.raw.chardb)
+        when (waifu.attribute) {
             "Fusion" -> {
-                val url = attributeUrl.getString("Fusion")
+                val url = getAttr.getString("Fusion")
                 holder.binding.cardAttribute.iconTint =
                     ContextCompat.getColorStateList(holder.itemView.context, R.color.fusion)
                 GlideHelper.btnIconAttribute(
@@ -54,7 +57,7 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
             }
 
             "Glacio" -> {
-                val url = attributeUrl.getString("Glacio")
+                val url = getAttr.getString("Glacio")
                 holder.binding.cardAttribute.iconTint =
                     ContextCompat.getColorStateList(holder.itemView.context, R.color.glacio)
                 GlideHelper.btnIconAttribute(
@@ -65,7 +68,7 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
             }
 
             "Spectro" -> {
-                val url = attributeUrl.getString("Spectro")
+                val url = getAttr.getString("Spectro")
                 holder.binding.cardAttribute.iconTint =
                     ContextCompat.getColorStateList(holder.itemView.context, R.color.spectro)
                 GlideHelper.btnIconAttribute(
@@ -76,7 +79,7 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
             }
 
             "Electro" -> {
-                val url = attributeUrl.getString("Electro")
+                val url = getAttr.getString("Electro")
                 holder.binding.cardAttribute.iconTint =
                     ContextCompat.getColorStateList(holder.itemView.context, R.color.electro)
                 GlideHelper.btnIconAttribute(
@@ -87,7 +90,7 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
             }
 
             "Aero" -> {
-                val url = attributeUrl.getString("Aero")
+                val url = getAttr.getString("Aero")
                 holder.binding.cardAttribute.iconTint =
                     ContextCompat.getColorStateList(holder.itemView.context, R.color.aero)
                 GlideHelper.btnIconAttribute(
@@ -98,7 +101,7 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
             }
 
             "Havoc" -> {
-                val url = attributeUrl.getString("Havoc")
+                val url = getAttr.getString("Havoc")
                 holder.binding.cardAttribute.iconTint =
                     ContextCompat.getColorStateList(holder.itemView.context, R.color.havoc)
                 GlideHelper.btnIconAttribute(
@@ -107,9 +110,6 @@ class ListWaiufAdapter(private val listWaifu: ArrayList<Waifu>) :
                     url
                 )
             }
-        }
-        holder.binding.root.setOnClickListener {
-            onClickItem?.invoke(waifu)
         }
     }
 

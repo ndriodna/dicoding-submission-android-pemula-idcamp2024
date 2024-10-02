@@ -1,5 +1,6 @@
 package com.dicoding.submission_android_pemula.Activity
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
@@ -25,8 +26,8 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.title = "Waifu Details"
 
         val waifu = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra("waifu",Waifu::class.java)
-        }else{
+            intent.getParcelableExtra("waifu", Waifu::class.java)
+        } else {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra("waifu")
         }
@@ -38,40 +39,64 @@ class DetailActivity : AppCompatActivity() {
         binding.detailDesc.text = waifu?.desc
 
         Glide.with(this).load(waifu?.img).into(binding.detailImg)
-         Glide.with(this).load(waifu?.thumbnail).into(binding.detailImgProfile)
+        Glide.with(this).load(waifu?.thumbnail).into(binding.detailImgProfile)
 
-         val attributeUrl = jsonHelper.getAttribute(this, R.raw.chardb)
-        when(waifu?.attribute){
+        val attributeUrl = jsonHelper.getAttribute(this, R.raw.chardb)
+        when (waifu?.attribute) {
             "Fusion" -> {
                 val url = attributeUrl.getString("Fusion")
-                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this,R.color.fusion))
+                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this, R.color.fusion))
                 Glide.with(this).load(url).into(binding.detailImgAttribute)
             }
+
             "Glacio" -> {
                 val url = attributeUrl.getString("Glacio")
-                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this,R.color.glacio))
+                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this, R.color.glacio))
                 Glide.with(this).load(url).into(binding.detailImgAttribute)
             }
+
             "Electro" -> {
                 val url = attributeUrl.getString("Electro")
-                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this,R.color.electro))
+                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this, R.color.electro))
                 Glide.with(this).load(url).into(binding.detailImgAttribute)
             }
+
             "Spectro" -> {
                 val url = attributeUrl.getString("Spectro")
-                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this,R.color.spectro))
+                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this, R.color.spectro))
                 Glide.with(this).load(url).into(binding.detailImgAttribute)
             }
+
             "Aero" -> {
                 val url = attributeUrl.getString("Aero")
-                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this,R.color.aero))
+                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this, R.color.aero))
                 Glide.with(this).load(url).into(binding.detailImgAttribute)
             }
+
             "Havoc" -> {
                 val url = attributeUrl.getString("Havoc")
-                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this,R.color.havoc))
+                binding.detailImg.setBackgroundColor(ContextCompat.getColor(this, R.color.havoc))
                 Glide.with(this).load(url).into(binding.detailImgAttribute)
             }
+        }
+
+        val dataSend =
+            """${waifu?.name}
+                |Attribute: ${waifu?.attribute}
+                |Rarity: ${waifu?.rarity} Star
+                |Birt Date: ${waifu?.birth}
+                |Profile Description:
+                 ${waifu?.desc}""".trimMargin()
+
+        binding.actionShare.setOnClickListener {
+            val shareIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, dataSend)
+                type = "text/plain"
+            }
+            val intent = Intent.createChooser(shareIntent, "Bagikan konten")
+            startActivity(intent)
+
         }
     }
 }

@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/about_menu"
         android:title="@string/about"
-        android:icon="@drawable/wuthering_waves_logo"
+        android:icon="@drawable/account_circle_24px"
         app:showAsAction="always"/>
 </menu>
